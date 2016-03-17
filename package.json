@@ -1,0 +1,45 @@
+{
+  "name": "process-limits",
+  "version": "1.0.0",
+  "description": "Get system limits (max open files etc) for a process ID",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timjrobinson/node-process-limits.git"
+  },
+  "keywords": [
+    "process",
+    "limits",
+    "proc",
+    "process",
+    "max",
+    "cpu",
+    "time",
+    "max",
+    "open",
+    "files",
+    "max",
+    "locked",
+    "memory",
+    "max",
+    "msgqueue",
+    "size",
+    "max",
+    "priority"
+  ],
+  "author": "Tim Robinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timjrobinson/node-process-limits/issues"
+  },
+  "homepage": "https://github.com/timjrobinson/node-process-limits#readme",
+  "devDependencies": {
+    "tap": "^5.7.0"
+  },
+  "dependencies": {
+    "camelcase": "^2.1.1"
+  }
+}
