@@ -2,6 +2,11 @@ var cp = require("child_process");
 var camelCase = require("camelcase");
 
 function getProcessLimits(pid, callback) {
+    if (!Number.isInteger(pid)) {
+        callback(new Error("pid must be an integer"));
+        return;
+    }
+
     cp.exec("cat /proc/" + pid + "/limits", function (err, stdout, stderr) {
         if (err) return callback(err);
         

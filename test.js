@@ -45,6 +45,17 @@ test("getProcessLimits", function (t) {
     });
 })
 
+test("getProcessLimits validation", function (t) {
+    processLimits("..", function (err, limits) {
+        assert(err instanceof Error);
+        assert.strictEqual(err.message, "pid must be an integer");
+
+        assert.strictEqual(limits, undefined);
+
+        t.end();
+    });
+});
+
 test("parseProcessLimits", function (t) {
      var sampleData = "" +
         "Limit                     Soft Limit           Hard Limit           Units     \n" +
